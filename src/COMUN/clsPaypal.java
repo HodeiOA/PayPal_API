@@ -17,7 +17,7 @@ public class clsPaypal extends UnicastRemoteObject implements itfPasarela
 	}
 
 	@Override
-	public boolean RealizarPago(String numTarjetaCredito)
+	public boolean ValidarPago(String numTarjetaCredito)
 	{
 		if(lTarjetas.contains(numTarjetaCredito))
 		{
