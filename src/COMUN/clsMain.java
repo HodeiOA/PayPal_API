@@ -9,15 +9,19 @@ public class clsMain
 
 	public static void main(String[] args)
 	{
+		String IP = "127.0.0.1";
+		String Puerto = "1099";
+		String NombreServicio = "PayPal";
+		
 		if (System.getSecurityManager() == null)
 		{
 			System.setSecurityManager(new SecurityManager());
 		}
 
-		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
+		String name = "//" + IP + ":" + Puerto + "/" + NombreServicio;
 
 		try {		
-			itfPasarela objServer = new clsPaypal();
+			itfPasarelaPaypal objServer = new clsPaypal();
 			Registry registry = LocateRegistry.createRegistry((Integer.valueOf(args[1])));
 			//Naming.rebind(name, objServer);
 			registry.rebind(name, objServer);

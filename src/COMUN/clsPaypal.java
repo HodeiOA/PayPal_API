@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
-public class clsPaypal extends UnicastRemoteObject implements itfPasarela
+public class clsPaypal extends UnicastRemoteObject implements itfPasarelaPaypal
 {
 	ArrayList<String> lTarjetas;
 
@@ -17,7 +17,7 @@ public class clsPaypal extends UnicastRemoteObject implements itfPasarela
 	}
 
 	@Override
-	public boolean ValidarPago(String numTarjetaCredito)
+	public boolean RealizarPago(String numTarjetaCredito)
 	{
 		if(lTarjetas.contains(numTarjetaCredito))
 		{
