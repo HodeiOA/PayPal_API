@@ -4,6 +4,8 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.HashMap;
 
+import APIs.itfPasarelaPaypal;
+
 public class clsMain
 {
 

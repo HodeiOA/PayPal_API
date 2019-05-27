@@ -4,6 +4,8 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
+import APIs.itfPasarelaPaypal;
+
 public class clsPaypal extends UnicastRemoteObject implements itfPasarelaPaypal
 {
 	ArrayList<String> lTarjetas;

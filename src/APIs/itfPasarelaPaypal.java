@@ -1,4 +1,4 @@
-package COMUN;
+package APIs;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
