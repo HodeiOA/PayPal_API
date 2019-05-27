@@ -10,7 +10,7 @@ public class clsMain
 	public static void main(String[] args)
 	{
 		String IP = "127.0.0.1";
-		String Puerto = "1099";
+		String Puerto = "1096";
 		String NombreServicio = "PayPal";
 		
 		if (System.getSecurityManager() == null)
@@ -22,7 +22,7 @@ public class clsMain
 
 		try {		
 			itfPasarelaPaypal objServer = new clsPaypal();
-			Registry registry = LocateRegistry.createRegistry((Integer.valueOf(args[1])));
+			Registry registry = LocateRegistry.createRegistry((Integer.valueOf(Puerto)));
 			//Naming.rebind(name, objServer);
 			registry.rebind(name, objServer);
 			System.out.println("* Server '" + name + "' active and waiting...");
